@@ -115,10 +115,10 @@ Error minting multi token
 
 ## Testing
 
-Prior to running tests, ensure you have renamed the `.env.example` file to `.env` and populated it with a test key (testSecretKey). Then, execute the following command:
+<!-- Prior to running tests, ensure you have renamed the `.env.example` file to `.env` and populated it with a test key (testSecretKey). Then, execute the following command: -->
 
 ```bash
-npm test
+./vendor/bin/phpunit
 ```
 
 

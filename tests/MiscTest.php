@@ -1,21 +1,15 @@
-<?php declare(strict_types=1);
+<?php
 
-require_once 'vendor/autoload.php';
-
+use MPW\MoiPayWay;
 use PHPUnit\Framework\TestCase;
 
-final class StackTest extends TestCase
+final class MiscTest extends TestCase
 {
-    public function testPushAndPop(): void
+    public function testCountries()
     {
-        $stack = [];
-        $this->assertSame(0, count($stack));
-
-        array_push($stack, 'foo');
-        $this->assertSame('foo', $stack[count($stack)-1]);
-        $this->assertSame(1, count($stack));
-
-        $this->assertSame('foo', array_pop($stack));
-        $this->assertSame(0, count($stack));
+        $mpw = new MoiPayWay('f009bea3934e05c051121c4ab0dd841a');
+        $countries = $mpw->misc->countries();
+        // var_dump($countries["data"]);
+        $this->assertTrue(count($countries["data"]) > 0);
     }
 }

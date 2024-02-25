@@ -4,7 +4,7 @@ namespace MPW;
 
 use GuzzleHttp\Client;
 
-abstract class Base
+class Base
 {
     public $client;
 

@@ -10,6 +10,8 @@ use MPW\Services\User;
 use MPW\Services\Verification;
 use MPW\Services\Wallet;
 
+require_once('utils/Constants.php');
+
 class MoiPayWay
 {
     private $secret_token;
