@@ -8,12 +8,12 @@ class Token
 {
     private $base;
     public $storage;
-    public $token;
+    public $multi;
 
     public function __construct(Base $base)
     {
         $this->base = $base;
         $this->storage = new TokenStorage($this->base);
-        $this->token = new TokenMulti($this->base);
+        $this->multi = new TokenMulti($this->base);
     }
 }
